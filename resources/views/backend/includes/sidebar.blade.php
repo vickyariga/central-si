@@ -64,6 +64,12 @@
                 </ul>
             </li>
 
+                <!--Riwayat Pendidikan-->
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('admin.pendidikan.index') }}">
+                            <i class="nav-icon fas fa-star"></i> Riwayat Pendidikan Dosen
+                        </a>
+                    </li>
         </ul>
     </nav>
 

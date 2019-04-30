@@ -41,6 +41,16 @@ Route::middleware(['auth'])->group( function(){
     Route::get('/admin/mahasiswa/{mahasiswa}/edit', 'MahasiswaController@edit')->name('admin.mahasiswa.edit');  //routing tampilkan form edit mahasiswa
 
     /** Routing untuk tugas mulai dari sini */
+
+    /**Riwayat Pendidikan*/
+    Route::get('/admin/pendidikan', 'PendidikanController@index')->name('admin.pendidikan.index');  //routing lihat daftar mahasiswa
+    Route::post('/admin/pendidikan', 'PendidikanController@store')->name('admin.pendidikan.store'); //routing simpan data mahasiswa baru
+    Route::get('/admin/pendidikan/create', 'PendidikanController@create')->name('admin.pendidikan.create'); //routing tampilkan form data mahasiswa baru
+    Route::delete('/admin/pendidikan/{mahasiswa}', 'PendidikanController@destroy')->name('admin.pendidikan.destroy'); //routing hapus data mahasiswa baru
+    Route::patch('/admin/pendidikan/{mahasiswa}', 'PendidikanController@update')->name('admin.pendidikan.update'); //routing simpan perubahan data mahasiswa
+    Route::get('/admin/pendidikan/{mahasiswa}', 'PendidikanController@show')->name('admin.pendidikan.show'); //routing tampilkan detail mahasiswa
+    Route::get('/admin/pendidikan/{mahasiswa}/edit', 'PendidikanController@edit')->name('admin.pendidikan.edit');  //routing tampilkan form edit mahasiswa
+
     Route::get('pembimbing/submit', 'PembimbingSubmissionController@create')->name('admin.pembimbing.create');
     Route::post('pembimbing/submit', 'PembimbingSubmissionController@store')->name('admin.pembimbing.store');
 
