@@ -65,11 +65,26 @@
             </li>
 
                 <!--Riwayat Pendidikan-->
+
+            <li class="nav-item nav-dropdown">
+
+                <a class="nav-link nav-dropdown-toggle" href="#">
+                    <i class="nav-icon fas fa-book"></i> Riwayat Pendidikan</a>
+                <ul class="nav-dropdown-items">
+                   
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('admin.pendidikan.index') }}">
-                            <i class="nav-icon fas fa-star"></i> Riwayat Pendidikan Dosen
+                        <a class="nav-link" href="{{ route('admin.dosen2.index') }}">
+                            <i class="nav-icon fas fa-star"></i> Dosen
                         </a>
                     </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('admin.mahasiswa2.index') }}">
+                            <i class="nav-icon fas fa-star"></i> Mahasiswa
+                        </a>
+                    </li>
+                </ul>
+            </li>
         </ul>
     </nav>
 

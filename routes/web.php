@@ -42,14 +42,24 @@ Route::middleware(['auth'])->group( function(){
 
     /** Routing untuk tugas mulai dari sini */
 
-    /**Riwayat Pendidikan*/
-    Route::get('/admin/pendidikan', 'PendidikanController@index')->name('admin.pendidikan.index');  //routing lihat daftar mahasiswa
-    Route::post('/admin/pendidikan', 'PendidikanController@store')->name('admin.pendidikan.store'); //routing simpan data mahasiswa baru
-    Route::get('/admin/pendidikan/create', 'PendidikanController@create')->name('admin.pendidikan.create'); //routing tampilkan form data mahasiswa baru
-    Route::delete('/admin/pendidikan/{mahasiswa}', 'PendidikanController@destroy')->name('admin.pendidikan.destroy'); //routing hapus data mahasiswa baru
-    Route::patch('/admin/pendidikan/{mahasiswa}', 'PendidikanController@update')->name('admin.pendidikan.update'); //routing simpan perubahan data mahasiswa
-    Route::get('/admin/pendidikan/{mahasiswa}', 'PendidikanController@show')->name('admin.pendidikan.show'); //routing tampilkan detail mahasiswa
-    Route::get('/admin/pendidikan/{mahasiswa}/edit', 'PendidikanController@edit')->name('admin.pendidikan.edit');  //routing tampilkan form edit mahasiswa
+    /**Riwayat Pendidikan Dosen*/
+    Route::get('/admin/dosen2', 'Dosen2Controller@index')->name('admin.dosen2.index');  //routing lihat daftar mahasiswa
+    Route::post('/admin/dosen2', 'Dosen2Controller@store')->name('admin.dosen2.store'); //routing simpan data mahasiswa baru
+    Route::get('/admin/dosen2/create', 'Dosen2Controller@create')->name('admin.dosen2.create'); //routing tampilkan form data mahasiswa baru
+    Route::delete('/admin/dosen2/{mahasiswa}', 'Dosen2Controller@destroy')->name('admin.dosen2.destroy'); //routing hapus data mahasiswa baru
+    Route::patch('/admin/dosen2/{mahasiswa}', 'Dosen2Controller@update')->name('admin.dosen2.update'); //routing simpan perubahan data mahasiswa
+    Route::get('/admin/dosen2/{mahasiswa}', 'Dosen2Controller@show')->name('admin.dosen2.show'); //routing tampilkan detail mahasiswa
+    Route::get('/admin/dosen2/{mahasiswa}/edit', 'Dosen2Controller@edit')->name('admin.dosen2.edit');  //routing tampilkan form edit mahasiswa
+
+    /** Riwayat Pendidikan Mahasiswa*/
+
+    Route::get('/admin/mahasiswa2', 'Mahasiswa2Controller@index')->name('admin.mahasiswa2.index');  //routing lihat daftar mahasiswa
+    Route::post('/admin/mahasiswa2', 'Mahasiswa2Controller@store')->name('admin.mahasiswa2.store'); //routing simpan data mahasiswa baru
+    Route::get('/admin/mahasiswa2/create', 'Mahasiswa2Controller@create')->name('admin.mahasiswa2.create'); //routing tampilkan form data mahasiswa baru
+    Route::delete('/admin/mahasiswa2/{mahasiswa}', 'Mahasiswa2Controller@destroy')->name('admin.mahasiswa2.destroy'); //routing hapus data mahasiswa baru
+    Route::patch('/admin/mahasiswa2/{mahasiswa}', 'Mahasiswa2Controller@update')->name('admin.mahasiswa2.update'); //routing simpan perubahan data mahasiswa
+    Route::get('/admin/mahasiswa2/{mahasiswa}', 'Mahasiswa2Controller@show')->name('admin.mahasiswa2.show'); //routing tampilkan detail mahasiswa
+    Route::get('/admin/mahasiswa2/{mahasiswa}/edit', 'Mahasiswa2Controller@edit')->name('admin.mahasiswa2.edit');  //routing tampilkan form edit mahasiswa
 
     Route::get('pembimbing/submit', 'PembimbingSubmissionController@create')->name('admin.pembimbing.create');
     Route::post('pembimbing/submit', 'PembimbingSubmissionController@store')->name('admin.pembimbing.store');

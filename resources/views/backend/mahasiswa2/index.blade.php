@@ -3,13 +3,13 @@
 @section('breadcrumb')
     {!! cui_breadcrumb([
         'Home' => route('admin.home'),
-        'Pendidikan' => route('admin.pendidikan.index'),
+        'Mahasiswa2' => route('admin.mahasiswa2.index'),
         'Index' => '#'
     ]) !!}
 @endsection 
 
 @section('toolbar')
-    {!! cui_toolbar_btn(route('admin.pendidikan.create'), 'icon-plus', 'Tambah Riwayat Pendidikan') !!}
+    {!! cui_toolbar_btn(route('admin.mahasiswa2.create'), 'icon-plus', 'Tambah Riwayat Pendidikan') !!}
 @endsection
 
 @section('content')
@@ -19,7 +19,7 @@
 
                 {{-- CARD HEADER--}}
                 <div class="card-header">
-                    <strong>List Riwayat Pendidikan</strong>
+                    <strong>List Riwayat Pendidikan Mahasiswa</strong>
                 </div>
 
                 {{-- CARD BODY--}}
@@ -31,7 +31,7 @@
                         </div>
                         <div class="col-md-6 justify-content-end">
                             <div class="row justify-content-end">
-                                {{ $pendidikans->links() }}
+                                {{ $mahasiswa2s->links() }}
                             </div>
                         </div>
                     </div>
@@ -51,20 +51,20 @@
                         </tr>
                         </thead>
                         <tbody>
-                        @foreach($pendidikans as $pendidikan)
+                        @foreach($mahasiswa2s as $mahasiswa2)
                             <tr>
-                                <td class="text-center">{{ $pendidikan->user_id }}</td>
-                                <td class="text-center">{{ $pendidikan->jenjang_id }}</td>
-                                <td class="text-center">{{ $pendidikan->nama_sekolah }}</td>
-                                <td class="text-center">{{ $pendidikan->jurusan }}</td>
-                                <td class="text-center">{{ $pendidikan->tahun_masuk }}</td>
-                                <td class="text-center">{{ $pendidikan->tahun_lulus }}</td>
-                                <td class="text-center">{{ $pendidikan->lokasi_sekolah }}</td>
-                                <td class="text-center">{{ $pendidikan->nomor_ijazah }}</td>
+                                <td class="text-center">{{ $mahasiswa2->user_id }}</td>
+                                <td class="text-center">{{ $mahasiswa2->jenjang_id }}</td>
+                                <td class="text-center">{{ $mahasiswa2->nama_sekolah }}</td>
+                                <td class="text-center">{{ $mahasiswa2->jurusan }}</td>
+                                <td class="text-center">{{ $mahasiswa2->tahun_masuk }}</td>
+                                <td class="text-center">{{ $mahasiswa2->tahun_lulus }}</td>
+                                <td class="text-center">{{ $mahasiswa2->lokasi_sekolah }}</td>
+                                <td class="text-center">{{ $mahasiswa2->nomor_ijazah }}</td>
                                 <td class="text-center">
-                                    {!! cui_btn_view(route('admin.pendidikan.show', [$pendidikan->id])) !!}
-                                    {!! cui_btn_edit(route('admin.pendidikan.edit', [$pendidikan->id])) !!}
-                                    {!! cui_btn_delete(route('admin.pendidikan.destroy', [$pendidikan->id]), "Anda yakin akan menghapus data riwayat pendidikan ini?") !!}
+                                    {!! cui_btn_view(route('admin.mahasiswa2.show', [$mahasiswa2->id])) !!}
+                                    {!! cui_btn_edit(route('admin.mahasiswa2.edit', [$mahasiswa2->id])) !!}
+                                    {!! cui_btn_delete(route('admin.mahasiswa2.destroy', [$mahasiswa2->id]), "Anda yakin akan menghapus data riwayat pendidikan ini?") !!}
                                 </td>
                             </tr>
                         @endforeach
@@ -77,7 +77,7 @@
                         </div>
                         <div class="col-md-6 justify-content-end">
                             <div class="row justify-content-end">
-                                {{ $pendidikans->links() }}
+                                {{ $mahasiswa2s->links() }}
                             </div>
                         </div>
                     </div>
